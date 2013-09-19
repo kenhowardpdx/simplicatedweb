@@ -1,0 +1,498 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// Comment out this import if you don't want WordPress Core CSS rules
+@import "wpcore";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "foundation/components/global"; // *always required
+// @import "foundation/components/grid";
+
+//
+// Use this grid if you want to start using the new Foundation 5 grid early.
+// It will change breakpoints to min-width: 640px and 1024px.
+//
+// @import "foundation/components/grid-5";
+//
+
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/type";
+// @import "foundation/components/buttons";
+// @import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+// @import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+// Compass Stuff
+@import "compass/css3/text-shadow";
+@import "compass/css3/box-shadow";
+
+/* Responsive Break-points */
+/*
+	bicycle = small devices
+	car = medium devices
+	semi = large devices
+*/
+@mixin breakpoint($point) {
+  @if $point == semi {
+    @media (min-width: 940px) { @content; }
+  }
+  @else if $point == car {
+    @media (min-width: 45em) { @content; }
+  }
+  @else if $point == bicycle {
+    @media (min-width: 35em)  { @content; }
+  }
+}
+
+/*.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	@include breakpoint(semi) { width: 63em; }
+	@include breakpoint(car) { width: 48em; }
+	@include breakpoint(bicycle) { width: 38em; }
+}*/
+
+$defaultColor: #000;
+$defaultReversedColor: #fff;
+
+$mainColor: #18a0ff;
+$mainColorShadow: #116dae;
+$mainColorDark: #165688; 
+
+$highlightColor: #fe5a00;
+$highlightAltColor: #ff975e;
+$highlightShadowColor: #8b3100;
+
+html, body {
+	background: #ffffff url('../images/bg.png');
+}
+
+.intro {
+	@media #{$small} {
+		min-height: 400px;
+		background-color: #444;
+		background-image: url('../images/ken-color.png'),url('../images/header-home-faded.jpg');
+	}
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom right, top center;
+	margin-top: -60px;
+	padding-top: 60px;
+	img {
+		display: inline-block;
+		@media #{$small} {
+			display: none;
+		}
+	}
+}
+
+body {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: $highlightColor;
+	text-decoration: underline;
+	&:hover,&:focus {
+		color: $highlightShadowColor;
+		text-decoration: none;
+	}
+}
+
+strong a {
+	color: inherit;
+}
+
+.desktop-only {
+	display: none;
+}
+
+
+.top-bar {
+	.name h1 {
+		margin-left: .5em;
+	}
+}
+
+@include breakpoint(semi) {
+	.header {
+		text-transform: uppercase;
+		margin-top: 60px;
+		margin-bottom: 60px;
+
+		.title-area {
+			display: none;
+		}
+
+		&> nav {
+			background-color: $highlightColor;
+			border-top: 3px solid $highlightAltColor;
+		}
+		.top-bar {
+			height: auto;
+
+			.top-bar-section {
+
+				margin: 0 auto;
+				text-align: center;
+
+				&>ul {
+					.divider {
+						border-right: 1px solid $highlightAltColor;
+						border-left: 0;
+						height: 42px;
+					}
+
+					display: block;
+					margin: 0 auto;
+					width: 100%;
+					text-align: center;
+					background-color: transparent;
+
+					li {
+						padding-top: .1em;
+						display: inline-block;
+						font-size: 1.5em;
+						min-height: 43px;
+						float: none;
+						vertical-align: top;
+
+						&.logo span {
+							position: relative;
+							width: 220px;
+							display: block;
+							margin: 0 auto;
+							text-align: center;
+							a {
+								display: block;
+								width: 220px;
+								position: absolute;
+								top: -60px;
+								background-color: transparent;
+							}
+						}
+
+						&.mobile-only {
+							display: none;
+						}
+
+						&>a {
+							background-color: transparent;
+							color: $defaultReversedColor;
+							display: block;
+							margin: 0 auto;
+							padding: .1em 1.8em;
+							text-decoration: none;
+							@include text-shadow(-2px -2px 0px rgba(0,0,0,.3));
+							&:hover,&:focus {
+								color: $highlightShadowColor;
+								@include text-shadow(-2px -2px 3px rgba(0,0,0,.1));
+							}
+							line-height: 1.8em;
+						}
+					}
+				}	
+			}
+		}
+	}
+}
+
+body.blog {
+	.top-bar .top-bar-section>ul li {
+		a.nav-knowledge {
+			color: $mainColor;
+			@include breakpoint(car) { color: $highlightShadowColor }
+			text-shadow: none;
+			cursor: default;
+		}
+	}
+}
+
+body.services {
+	.top-bar .top-bar-section>ul li {
+		a.nav-services {
+			color: $mainColor;
+			@include breakpoint(car) { color: $highlightShadowColor }
+			text-shadow: none;
+			cursor: default;
+		}
+	}
+}
+
+body.projects {
+	.top-bar .top-bar-section>ul li {
+		a.nav-projects {
+			color: $mainColor;
+			@include breakpoint(car) { color: $highlightShadowColor }
+			text-shadow: none;
+			cursor: default;
+		}
+	}
+}
+
+body.contact {
+	.top-bar .top-bar-section>ul li {
+		a.nav-contact {
+			color: $mainColor;
+			@include breakpoint(car) { color: $highlightShadowColor }
+			text-shadow: none;
+			cursor: default;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+	color: $mainColor;
+}
+
+p + h3 {
+	margin-top: 25px;
+}
+
+.content, footer {
+	.title {
+		@include text-shadow(-1px -1px 2px rgba(0,0,0,.3));
+	}
+}
+
+h4,.sub-title {
+	color: $highlightColor;
+	margin-top: 1.3em;
+	a {
+		text-decoration: none;
+	}
+}
+
+.post-date {
+	font-size: .8em;
+	font-style: italic;
+	color: $highlightAltColor;
+}
+
+.sidebar {
+	h1,h2,h3,h4,h5,h6 {
+		color: $highlightColor;
+		font-size: 1.4em;
+		text-transform: uppercase;
+	}
+	ul,ol {
+		list-style: none;
+		li {
+			padding-bottom: 1em;
+		}
+	}
+}
+
+#main {
+	padding-bottom: 2em;
+}
+
+.columns.welcome {
+	margin-top: 1.5em;
+	font-weight: bold;
+	h1 {
+		margin-bottom: 0;
+	}
+
+	p {
+		font-size: 2em;
+		@media #{$small} {
+			font-size: 2.2em;
+		}
+		line-height: 1.3em;
+	}
+
+	a {
+		display: inline-block;
+	}
+}
+
+body > footer, .copyright {
+	background-color: $mainColorDark;
+	color: $defaultReversedColor;
+	padding-top: 1em;
+}
+
+body > footer {
+	*, label {
+		color: inherit;
+	}
+	textarea {
+		color: #333;
+		color: rgba(0,0,0,0.75);
+	}
+	.title {
+		text-transform: uppercase;
+		padding-bottom: .5em;
+	}
+	ul,ol {
+		list-style: none;
+		li {
+			padding-bottom: .8em;
+		}
+	}
+	a {
+		&:hover,&:focus {
+			color: $highlightColor;
+		}
+	}
+}
+
+.copyright {
+	text-align: center;
+}
+
+/*.columns {
+	margin: 0 auto 1em;
+	float: none;
+	@include breakpoint(car) { margin: 0; float: left; }
+}*/
+
+.breadcrumbs li:last-child a {
+	color: $defaultColor;
+}
+
+/* BUTON COLOR CLASSES */
+.button {
+	background-color: $highlightColor;
+	border-color: $highlightShadowColor;
+	&:hover,&:focus {
+		background-color: $mainColor;
+		border-color: $mainColorShadow;
+	}
+}
+
+.footnote {
+	color: $highlightColor;
+}
+
+.has-overlay, .project-thumb {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	img {
+		@include box-shadow(#000000 0px 0px 10px inset);
+	}
+}
+
+a.has-overlay, a.project-thumb {
+	text-decoration: none;
+}
+
+.overlay {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.has-overlay:hover, .has-overlay:focus {
+	.overlay {
+		display: block;
+	}
+}
+
+.pagination {
+	font-size: 1.2em;
+	margin: 0 auto 1em;
+	a {
+		text-decoration: none;
+		&.button {
+			&:hover,&:focus {
+				background-color: #e9e9e9!important;
+				color: #999!important;
+				border-color: #d0d0d0;
+			}
+		}
+	}
+	li.arrow {
+		width: 8.5%;
+		&:first-child {
+			float: left;
+			margin-right: 1em;
+		}
+		&:last-child {
+			float: right;
+			margin-left: 1em;
+		}
+	}
+}
+
+.alignleft,.alignright {
+	margin: 0 auto 1em;
+	float: none;
+	display: block;
+}
+
+.alignleft {
+	@include breakpoint(car) { display: inline-block; float: left; margin: 5px 20px 20px 0; }
+}
+
+.alignright {
+	@include breakpoint(car) { display: inline-block; float: right; margin: 5px 0 20px 20px; }
+}
+
+ol,ul {
+	margin-left: 1.4em;
+}
+
+ul.posts {
+	margin-left: 0;
+}
+
+@media print {
+	body > footer, .menu-icon, #three-bar, .breadcrumbs{
+		display: none;
+	}
+}
+
+#three-bar, #three-bar-padding {
+	display: none;
+	@media #{$small} {
+		display: block;
+	}
+}
+
+
+
+

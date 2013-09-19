@@ -1,0 +1,18 @@
+#Force non-www:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+ErrorDocument 404 /error/404.html
+
+RewriteRule ^portfolio /projects/ [R=301,L]
+RewriteRule ^contact-me /contact/ [R=301,L]
+RewriteRule ^about /contact/ [R=301,L]
+RewriteRule ^portland-web-design / [R=301,L]
+RewriteRule ^services /what-i-do/ [R=301,L]
+RewriteRule ^pricing /what-i-do/ [R=301,L]
+RewriteRule ^blog /knowledge/ [R=301,L]
+RewriteRule ^about / [R=301,L]
+RewriteRule ^cms/wp-content/uploads/(.*)?$ /images/wp/$1 [R=301,L]
+
+RewriteRule ^blog/[0-9a-z]+/(.+)/?$ /knowledge/$1/ [R=301,L]

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="row">
+	<div class="large-12 columns content">
+			<h1 class="title">{% if page.title %}{{ page.title}}{% else %} MISSING PAGE TITLE {% endif; %}</h1>
+			
+			{{content}}
+
+	</div>
+</div>
+
+{% include breadcrumbs.html %}

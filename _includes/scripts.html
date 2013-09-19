@@ -1,0 +1,28 @@
+<script>
+  document.write('<script src=/js/vendor/'
+    + ('__proto__' in {} ? 'zepto' : 'jquery')
+    + '.js><\/script>');
+</script>
+
+<script src="/js/foundation/foundation.js"></script>
+<script src="/js/foundation/foundation.topbar.js"></script>
+<script src="/js/app.js"></script>
+
+<script type="text/javascript">
+if (location.host != 'localhost:4000') {
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6386829-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+}
+</script>
+<script>_threebar_id = 598230158;
+var tb = document.createElement('script'); tb.type = 'text/javascript';
+tb.async = true; tb.src = 'https://www.threebar.net/public/lib/bar.min.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tb, s);
+</script>

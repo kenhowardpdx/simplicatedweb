@@ -1,0 +1,25 @@
+plugins: ./_plugins
+
+exclude: ['Rakefile','config.rb']
+
+owner_link: http://simplicatedweb.com
+
+url: http://simplicatedweb.com
+
+name: Simplicated Web Designs
+
+title: Websites For Your Business
+
+image: /images/logo-med.png
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
+relative_permalinks: false
+
+permalink: /knowledge/:categories/:title/
+
+paginate: 5
+
+paginate_path: knowledge/page:num

@@ -1,0 +1,55 @@
+<footer>
+    <div class="row">
+      <div class="large-8 columns">
+        <section class="section">
+          <h5 class="title">Contact {{ site.name }}</h5>
+          <div class="content" data-slug="panel1">
+            <form id="contactForm">
+              <div class="row collapse results">
+                <!-- Form Results Displayed Here -->
+              </div>
+              <div class="row collapse">
+                <div class="large-2 columns">
+                  <label class="inline">Your Name</label>
+                </div>
+                <div class="large-10 columns">
+                  <input type="text" id="yourName" placeholder="Jane Smith">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="large-2 columns">
+                  <label class="inline"> Your Email</label>
+                </div>
+                <div class="large-10 columns">
+                  <input type="text" id="yourEmail" placeholder="jane@smithco.com">
+                </div>
+              </div>
+              <label>What's up?</label>
+              <textarea rows="4" id="yourMessage"></textarea>
+              <button type="submit" class="radius button">Send Your Message</button>
+            </form>
+          </div>
+        </section>
+      </div>
+      
+      <div class="large-4 columns">
+        <h5 class="title">Knowledge Topics</h5>
+        <ul class="posts">  
+          {% for post in site.posts limit:5 %}  
+             <li>  
+               <a href="{{ BASE_PATH }}{{ post.url }}">  
+               {{ post.title | truncate: 42 }}</a>  
+             </li>  
+          {% endfor %}  
+        </ul>
+      </div>
+    </div>
+</footer>
+
+<div class="copyright">
+  <div class="row">
+    <div class="12-large columns">
+      <p>&copy; 2013 {{ site.name }}. All Rights Reserved.</p>
+    </div>
+  </div>
+</div>

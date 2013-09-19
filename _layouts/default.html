@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body{% if page.class %} class="{{ page.class }}"{% endif %}>
+  {% include top-nav.html %}
+
+  <main role="main" id="main">
+ 
+    {{ content }}
+ 
+  </main>
+
+  {% include bottom-nav.html %}
+
+  {% include scripts.html %}
+
+</body>
+</html>

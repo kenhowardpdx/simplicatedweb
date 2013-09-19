@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<div class="row">
+	<div class="large-8 columns content">
+			<h1 class="title">{% if page.title %}{{ page.title}}{% else %} MISSING PAGE TITLE {% endif; %}</h1>
+			
+			{{content}}
+
+	</div>
+	{% if page.no-contact != true %}
+	<div class="large-4 columns sidebar">
+		<div class="panel radius">
+			<h3 class="title">Pass Me A Note</h3>
+			<p>I'm always looking for awesome projects. Click the button and start a conversation.</p>
+			<a href="/contact/" class="button radius">Hire Me</a>
+		</div>
+	</div>
+	{% endif; %}
+	{% if page.no-blog-feed != true %}
+	<div class="large-4 columns sidebar">
+		<div class="panel radius">
+			<h3 class="title">Knowledge Topics</h3>
+			<ul class="posts">  
+				{% for post in site.posts limit:5 %}  
+				   <li>  
+					   <a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.title }}">  
+					   {{ post.title | truncate: 36 }}</a>  
+				   </li>  
+				{% endfor %}  
+			</ul>
+		</div>
+	</div>
+	{% endif; %}
+	<div class="large-4 columns sidebar">
+		<div class="panel radius">
+			<h3 class="title">PDX Native</h3>
+			<p>You can find me most days in Downtown Portland.</p>
+			<address>Visit my office:<br />
+			1230 SW First Ave.<br />
+				Suite 200<br />
+				Portland, Oregon 97204</br />
+			</address>
+			<p><a href="tel:5035129323">(503) 512-9323</a></p>
+		</div>
+	</div>
+</div>
+
+{% include breadcrumbs.html %}
