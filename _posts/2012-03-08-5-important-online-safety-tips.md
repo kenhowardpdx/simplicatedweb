@@ -3,7 +3,7 @@ layout: post
 title: 5 Important Online Safety Tips
 excerpt: It has always been a concern of mine that giving my daughter unfiltered access to the internet could potentially expose her to harmful or inappropriate content. And now...
 ---
-<img class="alignright  wp-image-554" title="lock" src="http://www.simplicatedweb.com/cms/wp-content/old/uploads/2012/03/lock.jpg" alt="" width="245" height="184" />It has always been a concern of mine that giving my daughter unfiltered access to the internet could potentially expose her to harmful or inappropriate content. And now, with the proliferation of social networks and easy access to information, I worry that the access of personal information is becoming easier to target and misuse. Recently I noticed some odd activity through e-mail and Facebook that was cause for alarm.
+<img class="alignright  wp-image-554" title="lock" src="/images/wp/2012/03/lock.jpg" alt="" width="245" height="184" />It has always been a concern of mine that giving my daughter unfiltered access to the internet could potentially expose her to harmful or inappropriate content. And now, with the proliferation of social networks and easy access to information, I worry that the access of personal information is becoming easier to target and misuse. Recently I noticed some odd activity through e-mail and Facebook that was cause for alarm.
 
 <h3>Spammy E-mail</h3>
 <p style="text-align: center;"><a class="lightbox_trigger" href="http://www.simplicatedweb.com/images/wp/2012/03/email-security.jpg"><img class="aligncenter size-medium wp-image-551" title="email-security" src="http://www.simplicatedweb.com/cms/wp-content/uploads/2012/03/email-security-300x40.jpg" alt="" width="300" height="40" /></a></p>

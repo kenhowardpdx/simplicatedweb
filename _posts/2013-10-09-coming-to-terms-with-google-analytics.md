@@ -2,14 +2,14 @@
 title: Coming To Terms With Google Analytics' (not provided)
 date: "2013-10-09 16:44:18"
 layout: post
-excerpt: If you're not already tracking visitors on your site with an analytics software, you should be. But there are a some things you should be aware of.
+excerpt: If you're not already tracking visitors on your site with an analytics software, you should be. But there are a some things you should know.
 ---
 
-If you're not already tracking visitors on your site with an analytics software, you should be. But there are a some things you should be aware of.
+If you're not already tracking visitors on your site with an analytics software, you should be. But there are a some things you should know.
 
 #### What is Google Analytics Good At?
 
-Great question. It is good for reviewing targeted data points like bounce rate, duration of visit, content interest, landing pages, traffic source and a dozen other metrics.
+Great question. Google Analytics is a great resource for reviewing targeted data points like bounce rate, duration of visit, content interest, landing pages, traffic source and a dozen other metrics.
 
 #### What is Google Analytics Bad At?
 

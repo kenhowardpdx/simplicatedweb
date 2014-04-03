@@ -1,6 +1,6 @@
 plugins: ./_plugins
 
-exclude: ['Rakefile','config.rb']
+exclude: ['Rakefile','config.rb','node_modules']
 
 owner_link: http://simplicatedweb.com
 

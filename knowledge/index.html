@@ -10,7 +10,7 @@ sitemap:
 <div class="blogEntries">
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <h2 class="sub-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <h3 class="sub-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
   {% if post.excerpt %}
   <p class="post-excerpt">{{ post.excerpt }}</p>
   {% endif %}
